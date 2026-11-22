@@ -875,7 +875,7 @@ Opportunity Track: ${contactForm.roleTrack}`;
                     <option key={i} value={String(i)}>{t.track}</option>
                   ))}
                 </select>
-                <a href="/Vanshdeep_Sharma_Resume.txt" download className="px-3.5 py-1.5 rounded-lg bg-electric text-white text-xs font-semibold">
+                <a href={`${import.meta.env.BASE_URL}Vanshdeep_Sharma_Resume.txt`} download className="px-3.5 py-1.5 rounded-lg bg-electric text-white text-xs font-semibold">
                   Download (.TXT)
                 </a>
                 <button type="button" onClick={() => window.print()} className="px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-500 border border-emerald-500/30 text-xs font-mono flex items-center gap-1">
