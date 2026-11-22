@@ -1,0 +1,2129 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanshdeep Sharma | CSE (AI &amp; Data Science) Portfolio — Software, Python &amp; ML Developer</title>
+  <meta name="description" content="Official developer portfolio of Vanshdeep Sharma — Final-Year B.Tech Computer Science Engineering (Artificial Intelligence &amp; Data Science) student at CGC Landran, Punjab, India. Seeking internships and entry-level opportunities in Software Development, Python, Data Analytics, and AI/ML." />
+  <meta name="keywords" content="Vanshdeep Sharma, Computer Science Engineering, AI and Data Science, Python Developer, Software Developer Fresher, Data Analytics, Machine Learning, CGC Landran, Chandigarh, Punjab" />
+  <meta name="author" content="Vanshdeep Sharma" />
+  <!-- Open Graph / SEO Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Vanshdeep Sharma — CSE (AI &amp; Data Science) Developer Portfolio" />
+  <meta property="og:description" content="Hi, I'm Vanshdeep. I Build, Analyze &amp; Innovate with Technology. Explore my verified Python, GenAI, Data Analytics, and Machine Learning projects." />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vanshdeep Sharma | Software, Python &amp; AI/ML Portfolio" />
+  <meta name="twitter:description" content="B.Tech CSE (AI &amp; Data Science) undergraduate portfolio featuring modular Python systems, NLP classifiers, GenAI pipelines, and wearable health analytics." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS v3.4.17 -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            obsidian: '#070B14',
+            charcoal: '#0F172A',
+            electric: '#3B82F6',
+            violetAccent: '#8B5CF6',
+            cyanAccent: '#06B6D4',
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+
+  <style>
+    /* Theme CSS Variables — Guaranteed Instant Switching Between Dark & Light */
+    :root,
+    html.dark {
+      --bg-page: #070B14;
+      --bg-nav: rgba(7, 11, 20, 0.88);
+      --bg-card: rgba(15, 23, 42, 0.78);
+      --bg-subcard: rgba(2, 6, 23, 0.85);
+      --bg-chip: #020617;
+      --bg-input: #020617;
+      --bg-footer: rgba(2, 6, 23, 0.95);
+      --text-heading: #F8FAFC;
+      --text-body: #CBD5E1;
+      --text-muted: #94A3B8;
+      --border-main: rgba(30, 41, 59, 0.9);
+      --border-subtle: rgba(51, 65, 85, 0.65);
+      --cyan-accent: #06B6D4;
+      --grid-line: rgba(59, 130, 246, 0.05);
+      --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    html.light {
+      --bg-page: #F8FAFC;
+      --bg-nav: rgba(255, 255, 255, 0.92);
+      --bg-card: rgba(255, 255, 255, 0.96);
+      --bg-subcard: #F1F5F9;
+      --bg-chip: #F1F5F9;
+      --bg-input: #FFFFFF;
+      --bg-footer: #F1F5F9;
+      --text-heading: #0F172A;
+      --text-body: #334155;
+      --text-muted: #64748B;
+      --border-main: #E2E8F0;
+      --border-subtle: #CBD5E1;
+      --cyan-accent: #0284C7;
+      --grid-line: rgba(15, 23, 42, 0.04);
+      --card-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.07);
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: var(--bg-page) !important;
+      color: var(--text-body) !important;
+      overflow-x: hidden;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    h1, h2, h3, .font-display {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    }
+
+    .theme-nav {
+      background-color: var(--bg-nav) !important;
+      border-color: var(--border-main) !important;
+    }
+    .theme-card {
+      background-color: var(--bg-card) !important;
+      border-color: var(--border-main) !important;
+      box-shadow: var(--card-shadow) !important;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.24s ease, box-shadow 0.24s ease, background-color 0.24s ease;
+    }
+    .theme-card:hover {
+      transform: translateY(-3px);
+    }
+    .theme-subcard {
+      background-color: var(--bg-subcard) !important;
+      border-color: var(--border-subtle) !important;
+    }
+    .theme-chip {
+      background-color: var(--bg-chip) !important;
+      border-color: var(--border-subtle) !important;
+      color: var(--text-body) !important;
+    }
+    .theme-input {
+      background-color: var(--bg-input) !important;
+      border-color: var(--border-subtle) !important;
+      color: var(--text-heading) !important;
+    }
+    .theme-heading {
+      color: var(--text-heading) !important;
+    }
+    .theme-body {
+      color: var(--text-body) !important;
+    }
+    .theme-muted {
+      color: var(--text-muted) !important;
+    }
+    .theme-border {
+      border-color: var(--border-main) !important;
+    }
+    .theme-cyan {
+      color: var(--cyan-accent) !important;
+    }
+    .theme-footer {
+      background-color: var(--bg-footer) !important;
+      border-color: var(--border-main) !important;
+    }
+
+    /* Subtle SaaS Grid Background */
+    .bg-grid-pattern {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    }
+
+    /* Typing Cursor */
+    .typing-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.1em;
+      background-color: var(--cyan-accent);
+      margin-left: 4px;
+      vertical-align: middle;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Print Resume View */
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #printable-resume-sheet, #printable-resume-sheet * {
+        visibility: visible;
+      }
+      #printable-resume-sheet {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: #ffffff !important;
+        color: #0f172a !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="selection:bg-electric/30 selection:text-cyan-200">
+
+  <!-- AMBIENT GLOW ACCENTS -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-electric/15 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/3 -right-32 w-96 h-96 bg-violetAccent/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 left-1/4 w-80 h-80 bg-cyanAccent/10 rounded-full blur-3xl"></div>
+  </div>
+
+  <!-- A. STICKY NAVIGATION BAR -->
+  <header id="navbar" class="theme-nav sticky top-0 z-40 w-full backdrop-blur-md border-b transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
+      <!-- Brand / Personal Logo -->
+      <a href="#home" class="flex items-center gap-3 group focus:outline-none">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-electric via-indigo-500 to-cyanAccent p-[1.5px] shadow-lg shadow-electric/20">
+          <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center font-display font-bold text-sm tracking-tight text-white">
+            VS
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-base tracking-tight theme-heading leading-none">Vanshdeep Sharma</span>
+          <span class="font-mono text-[11px] theme-cyan mt-1">B.Tech CSE (AI &amp; DS) '27</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation" class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium theme-body">
+        <a href="#home" class="px-3 py-1.5 rounded-lg hover:text-electric transition">Home</a>
+        <a href="#about" class="px-3 py-1.5 rounded-lg hover:text-electric transition">About</a>
+        <a href="#skills" class="px-3 py-1.5 rounded-lg hover:text-electric transition">Skills</a>
+        <a href="#projects" class="px-3 py-1.5 rounded-lg hover:text-electric transition">Projects</a>
+        <a href="#education" class="px-3 py-1.5 rounded-lg hover:text-electric transition">Education</a>
+        <a href="#certifications" class="px-3 py-1.5 rounded-lg hover:text-electric transition">Certifications</a>
+        <a href="#experience" class="px-3 py-1.5 rounded-lg hover:text-electric transition">Activities</a>
+        <a href="#contact" class="px-3 py-1.5 rounded-lg hover:text-electric transition">Contact</a>
+      </nav>
+
+      <!-- Utility Controls: Theme Toggle & Download Resume -->
+      <div class="flex items-center gap-2.5">
+        <!-- Dark / Light Theme Toggle -->
+        <button id="theme-toggle-btn" type="button" onclick="toggleTheme()" aria-label="Toggle Dark or Light Theme" class="theme-chip inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border text-xs font-mono hover:border-electric transition">
+          <i id="theme-icon-sun" data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+          <i id="theme-icon-moon" data-lucide="moon" class="w-4 h-4 text-electric hidden"></i>
+          <span id="theme-toggle-label" class="hidden sm:inline">Light Mode</span>
+        </button>
+
+        <!-- Download Resume Button -->
+        <button id="nav-resume-btn" type="button" onclick="openResumeModal()" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-gradient-to-r from-electric to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white shadow-md shadow-electric/25 transition">
+          <i data-lucide="file-down" class="w-4 h-4"></i>
+          <span>Download Resume</span>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" type="button" onclick="toggleMobileMenu()" aria-label="Open Menu" class="lg:hidden p-2 rounded-lg border theme-chip">
+          <i id="mobile-menu-icon" data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu-drawer" class="hidden lg:hidden border-b theme-nav px-4 pt-2 pb-4 space-y-1">
+      <a href="#home" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-medium theme-heading hover:text-electric">Home</a>
+      <a href="#about" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-medium theme-heading hover:text-electric">About Me</a>
+      <a href="#skills" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-medium theme-heading hover:text-electric">Technical Skills</a>
+      <a href="#projects" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-medium theme-heading hover:text-electric">Featured Projects</a>
+      <a href="#education" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-medium theme-heading hover:text-electric">Education</a>
+      <a href="#certifications" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-medium theme-heading hover:text-electric">Certifications</a>
+      <a href="#experience" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-medium theme-heading hover:text-electric">Experience &amp; Activities</a>
+      <a href="#contact" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-medium theme-heading hover:text-electric">Contact</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="relative z-10 bg-grid-pattern">
+
+    <!-- B. HERO SECTION -->
+    <section id="home" class="relative pt-12 pb-20 md:pt-20 md:pb-28 border-b theme-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column: Intro, Typing Effect, CTAs -->
+          <div class="lg:col-span-7 space-y-6">
+            <!-- Availability & Location Pill -->
+            <div class="theme-subcard inline-flex flex-wrap items-center gap-2.5 px-3.5 py-1.5 rounded-full border shadow-inner">
+              <span class="relative flex h-2.5 w-2.5">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+              </span>
+              <span class="text-xs font-mono font-semibold text-emerald-500">Open to Opportunities</span>
+              <span class="theme-muted">•</span>
+              <span class="text-xs theme-body flex items-center gap-1">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 theme-cyan"></i>
+                <span>Chandigarh / Punjab, India</span>
+              </span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="font-display text-3xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight theme-heading leading-[1.12]">
+              Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-electric via-cyanAccent to-violetAccent">Vanshdeep</span>. I Build, Analyze &amp; Innovate with Technology.
+            </h1>
+
+            <!-- Dynamic Typing Role Line -->
+            <div class="flex flex-wrap items-center gap-2 text-base sm:text-xl font-mono theme-body min-h-[2rem]">
+              <span class="theme-muted">&gt;</span>
+              <span>Focus:</span>
+              <span id="typed-role-text" class="font-semibold theme-cyan">Python Developer</span><span class="typing-cursor"></span>
+            </div>
+
+            <!-- Subheading -->
+            <p class="text-base sm:text-lg theme-body leading-relaxed max-w-2xl">
+              Computer Science Engineering student passionate about Python development, software engineering, data analytics, and artificial intelligence. Focused on transforming ideas into practical solutions.
+            </p>
+
+            <!-- Primary CTA Buttons -->
+            <div class="flex flex-wrap items-center gap-3.5 pt-2">
+              <button type="button" onclick="openResumeModal()" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm bg-gradient-to-r from-electric to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white shadow-lg shadow-electric/25 transition transform hover:-translate-y-0.5">
+                <i data-lucide="download" class="w-4 h-4"></i>
+                <span>Download Resume</span>
+              </button>
+              <a href="#projects" class="theme-chip inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm border hover:border-electric transition">
+                <i data-lucide="folder-git-2" class="w-4 h-4 theme-cyan"></i>
+                <span>View Projects</span>
+              </a>
+              <a href="#contact" class="theme-chip inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm border hover:border-violetAccent transition">
+                <i data-lucide="send" class="w-4 h-4 text-violetAccent"></i>
+                <span>Contact Me</span>
+              </a>
+            </div>
+
+            <!-- Social Icons & Verified Links Bar -->
+            <div class="pt-4 flex flex-wrap items-center gap-5 border-t theme-border text-sm theme-muted">
+              <a href="https://github.com/Vansh042" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 hover:text-electric transition group">
+                <span class="p-2 rounded-lg border theme-chip">
+                  <i data-lucide="github" class="w-4 h-4"></i>
+                </span>
+                <span class="font-mono text-xs">github.com/Vansh042</span>
+              </a>
+              <a href="https://www.linkedin.com/in/vanshdeep-sharma-a08747215" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 hover:text-electric transition group">
+                <span class="p-2 rounded-lg border theme-chip text-blue-500">
+                  <i data-lucide="linkedin" class="w-4 h-4"></i>
+                </span>
+                <span class="font-mono text-xs">in/vanshdeep-sharma</span>
+              </a>
+              <a href="mailto:vanshdeep042@gmail.com" class="inline-flex items-center gap-2 hover:text-electric transition group">
+                <span class="p-2 rounded-lg border theme-chip theme-cyan">
+                  <i data-lucide="mail" class="w-4 h-4"></i>
+                </span>
+                <span class="font-mono text-xs">vanshdeep042@gmail.com</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Profile Portrait Card + Developer Terminal Widget -->
+          <div class="lg:col-span-5">
+            <div class="theme-card rounded-2xl border p-6 relative overflow-hidden">
+              <!-- Top Window Bar -->
+              <div class="flex items-center justify-between pb-4 mb-5 border-b theme-border">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                  <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                  <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                  <span class="ml-2 font-mono text-xs theme-muted">profile_vanshdeep.py</span>
+                </div>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-electric/15 text-electric border border-electric/30">Fresher / B.Tech '27</span>
+              </div>
+
+              <!-- Profile Image + Identity -->
+              <div class="flex flex-col sm:flex-row items-center gap-5 mb-6">
+                <div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-electric via-indigo-600 to-cyanAccent p-[2px] shadow-lg shrink-0">
+                  <div class="w-full h-full rounded-[14px] bg-slate-950 flex flex-col items-center justify-center text-center p-2">
+                    <span class="font-display font-extrabold text-2xl text-white tracking-tight">VS</span>
+                    <span class="font-mono text-[10px] text-cyan-300 mt-0.5">AI &amp; DS</span>
+                  </div>
+                </div>
+
+                <div class="text-center sm:text-left space-y-1.5">
+                  <h2 class="font-display font-bold text-xl theme-heading">Vanshdeep Sharma</h2>
+                  <p class="text-xs font-mono theme-cyan">B.Tech CSE (AI &amp; Data Science)</p>
+                  <p class="text-xs theme-muted">Chandigarh Group of Colleges (CGC), Landran</p>
+                  <div class="pt-1 flex flex-wrap justify-center sm:justify-start gap-1.5">
+                    <span class="px-2 py-0.5 rounded border text-[11px] font-mono theme-chip">Python</span>
+                    <span class="px-2 py-0.5 rounded border text-[11px] font-mono theme-chip">SQL</span>
+                    <span class="px-2 py-0.5 rounded border text-[11px] font-mono theme-chip">Scikit-Learn</span>
+                    <span class="px-2 py-0.5 rounded border text-[11px] font-mono theme-chip">GenAI</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Developer Spec Readout -->
+              <div class="theme-subcard rounded-xl border p-4 font-mono text-xs space-y-2">
+                <div class="flex justify-between gap-2">
+                  <span class="theme-muted">degree:</span>
+                  <span class="text-emerald-500 font-semibold">"B.Tech AI &amp; DS (2023–2027)"</span>
+                </div>
+                <div class="flex justify-between gap-2">
+                  <span class="theme-muted">core_stack:</span>
+                  <span class="theme-cyan font-semibold">["Python", "SQL", "React", "ML"]</span>
+                </div>
+                <div class="flex justify-between gap-2">
+                  <span class="theme-muted">verified_repos:</span>
+                  <span class="text-violetAccent font-semibold">4 End-to-End Systems</span>
+                </div>
+                <div class="flex justify-between gap-2">
+                  <span class="theme-muted">hackathons:</span>
+                  <span class="text-amber-500 font-semibold">SIH '23 (L2), '24 &amp; '25 Coord.</span>
+                </div>
+                <div class="flex justify-between gap-2">
+                  <span class="theme-muted">status:</span>
+                  <span class="text-emerald-500 font-semibold">"Open to Internships &amp; FTE"</span>
+                </div>
+              </div>
+
+              <!-- Quick Career Track Lens Pill Bar -->
+              <div class="mt-4 pt-4 border-t theme-border flex items-center justify-between text-xs theme-muted">
+                <span>Recruiter Career Lens:</span>
+                <a href="#skills" onclick="switchSkillView('tracks')" class="theme-cyan hover:underline font-mono flex items-center gap-1">
+                  Explore 8 Role Tracks <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- C. ABOUT ME SECTION -->
+    <section id="about" class="py-20 border-b theme-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-12">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric/10 border border-electric/30 text-electric font-mono text-xs mb-3">
+            <i data-lucide="user-check" class="w-3.5 h-3.5"></i>
+            <span>01 / ABOUT ME</span>
+          </div>
+          <h2 class="font-display text-2xl sm:text-4xl font-bold theme-heading tracking-tight">
+            Engineering Mindset Grounded in Practical Execution
+          </h2>
+          <p class="mt-3 theme-muted text-base">
+            Authentic fresher profile combining foundational Computer Science principles with hands-on Python development, automated testing, and applied AI/Data Science.
+          </p>
+        </div>
+
+        <!-- Two-Column Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          <!-- Narrative Column -->
+          <div class="lg:col-span-7 space-y-5 theme-body leading-relaxed text-base">
+            <div class="theme-card rounded-2xl border p-6 sm:p-8 space-y-4">
+              <p>
+                I am a final-year <strong class="theme-heading font-semibold">Bachelor of Technology (B.Tech) undergraduate in Computer Science Engineering (Artificial Intelligence &amp; Data Science)</strong> at <strong class="theme-heading font-semibold">Chandigarh Group of Colleges (CGC), Landran, Mohali</strong> (2023–2027). My academic journey is driven by a straightforward engineering philosophy: concepts only matter when they are translated into reliable, well-tested software.
+              </p>
+              <p>
+                My primary technical strength lies in <strong class="theme-cyan font-semibold">Python programming, modular software design, and data-driven problem solving</strong>. Whether I am engineering a 4-module phishing email detection pipeline verified across 27 automated Unit, Integration, System, and UAT test cases, or building a Pandas and SQLite ETL platform that harmonizes 15+ wearable health datasets, I focus on clean code structure, schema validation, and edge-case resilience.
+              </p>
+              <p>
+                Beyond software and data analytics, I actively explore <strong class="theme-heading font-semibold">Machine Learning and Generative AI orchestration</strong>—working with Scikit-Learn, NLTK, TF-IDF vectorization, Pydantic structured outputs, and the Google Gemini API. As a fresher, I bring strong fundamentals, transparent documentation, and the readiness to contribute immediately to engineering, analytics, and AI teams.
+              </p>
+
+              <!-- Career Objective Callout Box -->
+              <div class="theme-subcard mt-6 p-4 rounded-xl border-l-4 border-electric">
+                <div class="text-xs font-mono uppercase tracking-wider text-electric mb-1">Career Objective</div>
+                <p class="text-sm theme-body">
+                  Seeking internship and entry-level opportunities in <strong class="theme-heading font-semibold">Software Development, Python Development, Data Analytics, Artificial Intelligence, and Machine Learning</strong> where I can apply structured problem-solving, write maintainable code, and grow alongside experienced engineering teams.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Core Engineering Pillars Column -->
+          <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+            <div class="theme-card rounded-xl border p-5 flex items-start gap-4">
+              <div class="p-3 rounded-xl bg-electric/15 text-electric border border-electric/30 shrink-0">
+                <i data-lucide="code-2" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold theme-heading text-base">Modular Python &amp; Software Architecture</h3>
+                <p class="text-xs theme-muted mt-1 leading-relaxed">
+                  Decoupling preprocessing, training, inference, and UI layers (Streamlit, Gradio, React.js, REST APIs) for maintainable codebases.
+                </p>
+              </div>
+            </div>
+
+            <div class="theme-card rounded-xl border p-5 flex items-start gap-4">
+              <div class="p-3 rounded-xl bg-cyanAccent/15 theme-cyan border border-cyanAccent/30 shrink-0">
+                <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold theme-heading text-base">Data Analytics &amp; ETL Pipelines</h3>
+                <p class="text-xs theme-muted mt-1 leading-relaxed">
+                  Harmonizing multi-source datasets using Pandas, NumPy, SQL (CTEs, Joins, Window Queries), MS Excel, and Power BI KPI dashboards.
+                </p>
+              </div>
+            </div>
+
+            <div class="theme-card rounded-xl border p-5 flex items-start gap-4">
+              <div class="p-3 rounded-xl bg-violetAccent/15 text-violetAccent border border-violetAccent/30 shrink-0">
+                <i data-lucide="brain-circuit" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold theme-heading text-base">Applied AI, NLP &amp; GenAI Workflows</h3>
+                <p class="text-xs theme-muted mt-1 leading-relaxed">
+                  Building classification pipelines (Scikit-Learn, TF-IDF, NLTK) and multimodal Google Gemini API workflows with Pydantic validation.
+                </p>
+              </div>
+            </div>
+
+            <div class="theme-card rounded-xl border p-5 flex items-start gap-4">
+              <div class="p-3 rounded-xl bg-emerald-500/15 text-emerald-500 border border-emerald-500/30 shrink-0">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold theme-heading text-base">Verification &amp; Defensive Testing</h3>
+                <p class="text-xs theme-muted mt-1 leading-relaxed">
+                  Validating software across Unit, Integration, System, and UAT test cases with boundary checks and clean exception handling.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D. TECHNICAL SKILLS SECTION -->
+    <section id="skills" class="py-20 border-b theme-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyanAccent/10 border border-cyanAccent/30 theme-cyan font-mono text-xs mb-3">
+              <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
+              <span>02 / TECHNICAL SKILLS</span>
+            </div>
+            <h2 class="font-display text-2xl sm:text-4xl font-bold theme-heading tracking-tight">
+              Categorized Technical Stack &amp; Role Readiness
+            </h2>
+            <p class="mt-2 theme-muted text-base max-w-2xl">
+              Organized by core domain without arbitrary percentage bars—backed by real repositories, coursework, and technical certifications.
+            </p>
+          </div>
+
+          <!-- View Switcher: Core Categories vs 8-Track JD Matrix -->
+          <div class="theme-subcard inline-flex p-1 rounded-xl border self-start">
+            <button id="tab-skills-core" type="button" onclick="switchSkillView('core')" class="px-3.5 py-2 rounded-lg text-xs font-mono font-semibold bg-electric text-white transition">
+              Core Domains (5)
+            </button>
+            <button id="tab-skills-tracks" type="button" onclick="switchSkillView('tracks')" class="px-3.5 py-2 rounded-lg text-xs font-mono font-semibold theme-muted hover:text-electric transition">
+              8-Track Role Matrix
+            </button>
+          </div>
+        </div>
+
+        <!-- VIEW 1: 5 CORE SKILL CATEGORIES -->
+        <div id="skills-core-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Category 1: Programming Languages -->
+          <div class="theme-card rounded-2xl border p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="p-2.5 rounded-xl bg-electric/15 text-electric border border-electric/30">
+                    <i data-lucide="terminal" class="w-5 h-5"></i>
+                  </div>
+                  <h3 class="font-display font-bold text-lg theme-heading">Programming Languages</h3>
+                </div>
+                <span class="font-mono text-[11px] theme-muted">Core Syntax</span>
+              </div>
+              <p class="text-xs theme-muted mb-4">
+                Primary focus on Python for backend logic, automation, data processing, and ML, alongside SQL and C/C++ foundations.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-electric"></span>Python (Primary)
+                </span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">SQL (MySQL / SQLite)</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">JavaScript (ES6+)</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">C / C++</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">R (Foundational)</span>
+              </div>
+            </div>
+            <div class="mt-5 pt-3 border-t theme-border text-[11px] font-mono theme-muted flex items-center justify-between">
+              <span>Applied in: All 4 GitHub Repos</span>
+              <span class="text-emerald-500 font-semibold">DSA &amp; OOP</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Web Technologies -->
+          <div class="theme-card rounded-2xl border p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="p-2.5 rounded-xl bg-cyanAccent/15 theme-cyan border border-cyanAccent/30">
+                    <i data-lucide="globe" class="w-5 h-5"></i>
+                  </div>
+                  <h3 class="font-display font-bold text-lg theme-heading">Web Technologies</h3>
+                </div>
+                <span class="font-mono text-[11px] theme-muted">Frontend &amp; UI</span>
+              </div>
+              <p class="text-xs theme-muted mb-4">
+                Building responsive web interfaces and interactive Python data/AI web apps with clean REST API and schema integration.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">HTML5 &amp; CSS3</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">JavaScript (ES6+)</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">React.js</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Node.js</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Streamlit</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Gradio Web UI</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">REST APIs</span>
+              </div>
+            </div>
+            <div class="mt-5 pt-3 border-t theme-border text-[11px] font-mono theme-muted flex items-center justify-between">
+              <span>Applied in: Health App, Video Gen, E-Commerce</span>
+              <span class="theme-cyan font-semibold">Responsive UI</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Data Analytics & BI -->
+          <div class="theme-card rounded-2xl border p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="p-2.5 rounded-xl bg-emerald-500/15 text-emerald-500 border border-emerald-500/30">
+                    <i data-lucide="database" class="w-5 h-5"></i>
+                  </div>
+                  <h3 class="font-display font-bold text-lg theme-heading">Data Analytics &amp; BI</h3>
+                </div>
+                <span class="font-mono text-[11px] theme-muted">ETL &amp; Insights</span>
+              </div>
+              <p class="text-xs theme-muted mb-4">
+                Cleaning multi-source datasets, writing analytical SQL queries, and designing KPI visualizations and automated PDF/Excel reports.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Pandas &amp; NumPy</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Matplotlib &amp; Seaborn</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Data Visualization</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">SQL (Joins, CTEs, Window)</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">MS Excel (XLOOKUP, Pivots)</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Power BI (DAX, KPIs)</span>
+              </div>
+            </div>
+            <div class="mt-5 pt-3 border-t theme-border text-[11px] font-mono theme-muted flex items-center justify-between">
+              <span>Applied in: 15+ Wearable Datasets ETL</span>
+              <span class="text-emerald-500 font-semibold">Cisco Certified</span>
+            </div>
+          </div>
+
+          <!-- Category 4: AI, Machine Learning & GenAI -->
+          <div class="theme-card rounded-2xl border p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="p-2.5 rounded-xl bg-violetAccent/15 text-violetAccent border border-violetAccent/30">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                  </div>
+                  <h3 class="font-display font-bold text-lg theme-heading">AI &amp; Machine Learning</h3>
+                </div>
+                <span class="font-mono text-[11px] theme-muted">Models &amp; LLMs</span>
+              </div>
+              <p class="text-xs theme-muted mb-4">
+                Supervised classification pipelines, data preprocessing, NLP text vectorization, and multimodal LLM orchestration.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Scikit-Learn</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Machine Learning Fundamentals</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Data Preprocessing</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Classification (LogReg, RF, NB)</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">NLP (NLTK, TF-IDF, Regex)</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Google Gemini API</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Pydantic Validation</span>
+              </div>
+            </div>
+            <div class="mt-5 pt-3 border-t theme-border text-[11px] font-mono theme-muted flex items-center justify-between">
+              <span>Applied in: Phishing ML (97.3% Acc) &amp; Video Gen</span>
+              <span class="text-violetAccent font-semibold">IBM &amp; AWS AI</span>
+            </div>
+          </div>
+
+          <!-- Category 5: Tools, Cloud & Quality Assurance -->
+          <div class="theme-card rounded-2xl border p-6 flex flex-col justify-between md:col-span-2 lg:col-span-2">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="p-2.5 rounded-xl bg-amber-500/15 text-amber-500 border border-amber-500/30">
+                    <i data-lucide="wrench" class="w-5 h-5"></i>
+                  </div>
+                  <h3 class="font-display font-bold text-lg theme-heading">Tools, Platforms, Cloud &amp; Software QA</h3>
+                </div>
+                <span class="font-mono text-[11px] theme-muted">DevOps &amp; QA</span>
+              </div>
+              <p class="text-xs theme-muted mb-4">
+                Version control, developer environments, cloud infrastructure foundations, and multi-stage automated test verification.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Git &amp; GitHub</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">VS Code</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Jupyter Notebook</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Streamlit &amp; Gradio</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">AWS Cloud (IAM, VPC, CloudWatch)</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Unit, Integration, System &amp; UAT Testing</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Linux &amp; Windows CLI</span>
+                <span class="theme-chip px-3 py-1.5 rounded-lg border text-xs font-mono">Pillow (PIL) &amp; MoviePy</span>
+              </div>
+            </div>
+            <div class="mt-5 pt-3 border-t theme-border text-[11px] font-mono theme-muted flex flex-wrap items-center justify-between gap-2">
+              <span>Verified across 27 automated test cases in Phishing Detection System</span>
+              <span class="text-amber-500 font-semibold">AWS Academy Cloud Operations Graduate</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- VIEW 2: 8-TRACK CAREER ROLE MATRIX -->
+        <div id="skills-tracks-grid" class="hidden space-y-4">
+          <div class="theme-subcard p-4 rounded-xl border text-xs theme-body flex flex-wrap items-center justify-between gap-2">
+            <span><strong class="theme-cyan font-mono">8-Track Master Resume Alignment:</strong> Inspect the exact tools and repositories mapped for each target role track.</span>
+            <button type="button" onclick="openResumeModal()" class="text-electric hover:underline font-mono font-semibold">Open Tailored Resume Generator →</button>
+          </div>
+          <div id="tracks-cards-container" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- E. FEATURED PROJECTS SECTION -->
+    <section id="projects" class="py-20 border-b theme-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header + Filter Controls -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-10 gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violetAccent/10 border border-violetAccent/30 text-violetAccent font-mono text-xs mb-3">
+              <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+              <span>03 / FEATURED PROJECTS</span>
+            </div>
+            <h2 class="font-display text-2xl sm:text-4xl font-bold theme-heading tracking-tight">
+              Verified Engineering &amp; AI Projects
+            </h2>
+            <p class="mt-2 theme-muted text-base max-w-2xl">
+              Transparently distinguishing between completed, tested repositories on GitHub and planned project slots. Click <strong class="theme-heading font-semibold">Interactive Demo &amp; Specs</strong> on any project to inspect its pipeline architecture.
+            </p>
+          </div>
+
+          <!-- Interactive Filter Bar -->
+          <div class="flex flex-wrap items-center gap-2" role="tablist" aria-label="Project category filter">
+            <button type="button" onclick="filterProjects('All')" data-filter="All" class="project-filter-btn px-3.5 py-2 rounded-xl text-xs font-mono font-semibold bg-electric text-white shadow-sm transition">
+              All
+            </button>
+            <button type="button" onclick="filterProjects('Python')" data-filter="Python" class="project-filter-btn theme-chip px-3.5 py-2 rounded-xl text-xs font-mono font-semibold border hover:border-electric transition">
+              Python
+            </button>
+            <button type="button" onclick="filterProjects('Web Development')" data-filter="Web Development" class="project-filter-btn theme-chip px-3.5 py-2 rounded-xl text-xs font-mono font-semibold border hover:border-electric transition">
+              Web Development
+            </button>
+            <button type="button" onclick="filterProjects('Data Analytics')" data-filter="Data Analytics" class="project-filter-btn theme-chip px-3.5 py-2 rounded-xl text-xs font-mono font-semibold border hover:border-electric transition">
+              Data Analytics
+            </button>
+            <button type="button" onclick="filterProjects('AI/ML')" data-filter="AI/ML" class="project-filter-btn theme-chip px-3.5 py-2 rounded-xl text-xs font-mono font-semibold border hover:border-electric transition">
+              AI/ML
+            </button>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- F. EDUCATION SECTION -->
+    <section id="education" class="py-20 border-b theme-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-12">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric/10 border border-electric/30 text-electric font-mono text-xs mb-3">
+            <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>
+            <span>04 / EDUCATION</span>
+          </div>
+          <h2 class="font-display text-2xl sm:text-4xl font-bold theme-heading tracking-tight">
+            Academic Timeline
+          </h2>
+          <p class="mt-2 theme-muted text-base">
+            Undergraduate specialization in Artificial Intelligence &amp; Data Science built on a strong CBSE foundation in Chandigarh.
+          </p>
+        </div>
+
+        <!-- Vertical Timeline -->
+        <div class="relative pl-6 sm:pl-8 border-l-2 theme-border space-y-10 max-w-4xl">
+          
+          <!-- Timeline Item 1: B.Tech -->
+          <div class="relative group">
+            <span class="absolute -left-[33px] sm:-left-[41px] top-1.5 w-4 h-4 rounded-full bg-electric ring-4 ring-blue-500/20"></span>
+            <div class="theme-card rounded-2xl border p-6 sm:p-7">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-electric/15 text-electric border border-electric/30">
+                  2023 – 2027 (Expected Graduation)
+                </span>
+                <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-500/15 text-emerald-500 border border-emerald-500/30">
+                  Current Status: Undergraduate Student (Final Year)
+                </span>
+              </div>
+              <h3 class="font-display text-xl font-bold theme-heading mt-2">
+                Bachelor of Technology (B.Tech) in Computer Science Engineering (Artificial Intelligence &amp; Data Science)
+              </h3>
+              <p class="text-sm theme-cyan font-medium mt-1">
+                Chandigarh Group of Colleges (CGC), Landran, Mohali, Punjab
+              </p>
+              <p class="text-sm theme-body mt-3 leading-relaxed">
+                Focused on core software engineering, data structures &amp; algorithms, machine learning pipelines, relational databases, and applied AI systems. Active participant and institutional coordinator for Smart India Hackathon (SIH).
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="theme-chip px-2.5 py-1 rounded-md border text-xs font-mono">Data Structures &amp; Algorithms</span>
+                <span class="theme-chip px-2.5 py-1 rounded-md border text-xs font-mono">Machine Learning</span>
+                <span class="theme-chip px-2.5 py-1 rounded-md border text-xs font-mono">DBMS &amp; SQL</span>
+                <span class="theme-chip px-2.5 py-1 rounded-md border text-xs font-mono">OOP &amp; Software Engineering</span>
+                <span class="theme-chip px-2.5 py-1 rounded-md border text-xs font-mono">Data Analytics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: Class XII -->
+          <div class="relative group">
+            <span class="absolute -left-[33px] sm:-left-[41px] top-1.5 w-4 h-4 rounded-full bg-cyanAccent ring-4 ring-cyan-500/20"></span>
+            <div class="theme-card rounded-2xl border p-6">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="px-3 py-1 rounded-full text-xs font-mono theme-cyan bg-cyanAccent/10 border border-cyanAccent/30">
+                  2022 – 2023
+                </span>
+                <span class="text-xs font-mono theme-muted">CBSE Senior Secondary</span>
+              </div>
+              <h3 class="font-display text-lg font-bold theme-heading mt-1">
+                CBSE Class XII (Senior Secondary Education)
+              </h3>
+              <p class="text-sm theme-body mt-1">
+                Dev Samaj Modern School, Sector 21C, Chandigarh
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3: Class X -->
+          <div class="relative group">
+            <span class="absolute -left-[33px] sm:-left-[41px] top-1.5 w-4 h-4 rounded-full bg-violetAccent ring-4 ring-violet-500/20"></span>
+            <div class="theme-card rounded-2xl border p-6">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="px-3 py-1 rounded-full text-xs font-mono text-violetAccent bg-violetAccent/10 border border-violetAccent/30">
+                  2020 – 2021
+                </span>
+                <span class="text-xs font-mono theme-muted">CBSE Secondary</span>
+              </div>
+              <h3 class="font-display text-lg font-bold theme-heading mt-1">
+                CBSE Class X (Secondary Education)
+              </h3>
+              <p class="text-sm theme-body mt-1">
+                Dev Samaj Modern School, Sector 21C, Chandigarh
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- G. CERTIFICATIONS & LEARNING SECTION -->
+    <section id="certifications" class="py-20 border-b theme-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-500 font-mono text-xs mb-3">
+            <i data-lucide="award" class="w-3.5 h-3.5"></i>
+            <span>05 / CERTIFICATIONS &amp; CONTINUOUS LEARNING</span>
+          </div>
+          <h2 class="font-display text-2xl sm:text-4xl font-bold theme-heading tracking-tight">
+            Verified Technical Certifications
+          </h2>
+          <p class="mt-2 theme-muted text-base max-w-2xl">
+            Industry-aligned certifications across AWS Cloud Operations, Generative AI, Prompt Engineering, Data Analytics, and Machine Learning.
+          </p>
+        </div>
+
+        <!-- Certifications Grid -->
+        <div id="certifications-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+      </div>
+    </section>
+
+    <!-- H. EXPERIENCE, HACKATHONS & TECHNICAL ACTIVITIES -->
+    <section id="experience" class="py-20 border-b theme-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-12">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-500 font-mono text-xs mb-3">
+            <i data-lucide="flame" class="w-3.5 h-3.5"></i>
+            <span>06 / EXPERIENCE, HACKATHONS &amp; ACTIVITIES</span>
+          </div>
+          <h2 class="font-display text-2xl sm:text-4xl font-bold theme-heading tracking-tight">
+            Hackathons, Leadership &amp; Practical Development
+          </h2>
+          <p class="mt-2 theme-muted text-base">
+            As an undergraduate fresher, my hands-on track record is built through national hackathons, institutional coordination, and end-to-end open-source repositories.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Activity 1: SIH 2025 Coordinator -->
+          <div class="theme-card rounded-2xl border p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="px-3 py-1 rounded-full text-xs font-mono bg-amber-500/15 text-amber-500 border border-amber-500/30">
+                  Smart India Hackathon 2025
+                </span>
+                <i data-lucide="users" class="w-5 h-5 text-amber-500"></i>
+              </div>
+              <h3 class="font-display font-bold text-lg theme-heading">
+                Institutional Execution &amp; Participant Coordinator — SIH 2025
+              </h3>
+              <p class="text-xs font-mono theme-cyan mt-1">CGC Landran, Mohali</p>
+              <p class="text-sm theme-body mt-3 leading-relaxed">
+                Coordinated participant onboarding, technical team workflows, and institutional execution for Smart India Hackathon (SIH) 2025 at Chandigarh Group of Colleges, Landran.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t theme-border text-xs font-mono theme-muted">
+              Leadership • Event Execution • Team Coordination
+            </div>
+          </div>
+
+          <!-- Activity 2: SIH 2023 & 2024 Competitor -->
+          <div class="theme-card rounded-2xl border p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="px-3 py-1 rounded-full text-xs font-mono bg-electric/15 text-electric border border-electric/30">
+                  SIH 2023 &amp; SIH 2024
+                </span>
+                <i data-lucide="trophy" class="w-5 h-5 text-electric"></i>
+              </div>
+              <h3 class="font-display font-bold text-lg theme-heading">
+                Smart India Hackathon Competitor (Cleared Two Levels in SIH 2023)
+              </h3>
+              <p class="text-xs font-mono theme-cyan mt-1">National Innovation Challenge</p>
+              <p class="text-sm theme-body mt-3 leading-relaxed">
+                Cleared two competitive evaluation levels in Smart India Hackathon 2023 and actively participated in SIH 2024, contributing to problem scoping, rapid software prototyping, and technical presentations.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t theme-border text-xs font-mono theme-muted">
+              Rapid Prototyping • Problem Solving • Teamwork
+            </div>
+          </div>
+
+          <!-- Activity 3: Practical Software & QA Engineering -->
+          <div class="theme-card rounded-2xl border p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/15 text-emerald-500 border border-emerald-500/30">
+                  2023 – Present
+                </span>
+                <i data-lucide="git-branch" class="w-5 h-5 text-emerald-500"></i>
+              </div>
+              <h3 class="font-display font-bold text-lg theme-heading">
+                Applied AI, Data &amp; Software Engineering Projects
+              </h3>
+              <p class="text-xs font-mono theme-cyan mt-1">GitHub (@Vansh042) &amp; Academic Labs</p>
+              <p class="text-sm theme-body mt-3 leading-relaxed">
+                Designed, built, and documented modular Python systems spanning phishing detection (27 automated QA tests), GenAI video synthesis (Gemini 2.5 Flash + Pillow), wearable health ETL, and Instagram NLP spam triage.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t theme-border text-xs font-mono theme-muted">
+              Clean Code • Automated Testing • Documentation
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- I. CONTACT SECTION -->
+    <section id="contact" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          <!-- Left Column: Direct Contact Details & Recruiter Quick Copy -->
+          <div class="lg:col-span-5 space-y-6">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyanAccent/10 border border-cyanAccent/30 theme-cyan font-mono text-xs mb-3">
+                <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+                <span>07 / CONTACT ME</span>
+              </div>
+              <h2 class="font-display text-2xl sm:text-4xl font-bold theme-heading tracking-tight">
+                Let's Discuss Internships &amp; Entry-Level Roles
+              </h2>
+              <p class="mt-3 theme-muted text-base leading-relaxed">
+                Available for Software Development, Python Engineering, Data Analytics, and AI/ML internships or fresher opportunities. Reach out directly via email, LinkedIn, or the instant message dispatch form.
+              </p>
+            </div>
+
+            <!-- Contact Cards -->
+            <div class="space-y-3.5">
+              <!-- Email Card -->
+              <div class="theme-card rounded-xl border p-4 flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3.5 min-w-0">
+                  <div class="p-2.5 rounded-xl bg-electric/15 text-electric border border-electric/30 shrink-0">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                  </div>
+                  <div class="min-w-0">
+                    <div class="text-xs font-mono theme-muted">Email Address</div>
+                    <a href="mailto:vanshdeep042@gmail.com" class="text-sm font-medium theme-heading hover:text-electric truncate block">vanshdeep042@gmail.com</a>
+                  </div>
+                </div>
+                <button type="button" onclick="copyText('vanshdeep042@gmail.com', 'Email address copied!')" class="theme-chip px-2.5 py-1.5 rounded-lg text-xs font-mono border shrink-0">
+                  Copy
+                </button>
+              </div>
+
+              <!-- Phone Card -->
+              <div class="theme-card rounded-xl border p-4 flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3.5 min-w-0">
+                  <div class="p-2.5 rounded-xl bg-emerald-500/15 text-emerald-500 border border-emerald-500/30 shrink-0">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                  </div>
+                  <div class="min-w-0">
+                    <div class="text-xs font-mono theme-muted">Phone / WhatsApp</div>
+                    <a href="tel:+917814438015" class="text-sm font-medium theme-heading hover:text-emerald-500 truncate block">+91 7814438015</a>
+                  </div>
+                </div>
+                <button type="button" onclick="copyText('+91 7814438015', 'Phone number copied!')" class="theme-chip px-2.5 py-1.5 rounded-lg text-xs font-mono border shrink-0">
+                  Copy
+                </button>
+              </div>
+
+              <!-- LinkedIn Card -->
+              <div class="theme-card rounded-xl border p-4 flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3.5 min-w-0">
+                  <div class="p-2.5 rounded-xl bg-blue-500/15 text-blue-500 border border-blue-500/30 shrink-0">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                  </div>
+                  <div class="min-w-0">
+                    <div class="text-xs font-mono theme-muted">LinkedIn Profile</div>
+                    <a href="https://www.linkedin.com/in/vanshdeep-sharma-a08747215" target="_blank" rel="noopener noreferrer" class="text-sm font-medium theme-heading hover:text-blue-500 truncate block">linkedin.com/in/vanshdeep-sharma-a08747215</a>
+                  </div>
+                </div>
+                <a href="https://www.linkedin.com/in/vanshdeep-sharma-a08747215" target="_blank" rel="noopener noreferrer" class="theme-chip px-2.5 py-1.5 rounded-lg text-xs font-mono border shrink-0">
+                  Open ↗
+                </a>
+              </div>
+
+              <!-- GitHub Card -->
+              <div class="theme-card rounded-xl border p-4 flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3.5 min-w-0">
+                  <div class="p-2.5 rounded-xl bg-violetAccent/15 text-violetAccent border border-violetAccent/30 shrink-0">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                  </div>
+                  <div class="min-w-0">
+                    <div class="text-xs font-mono theme-muted">GitHub Repositories</div>
+                    <a href="https://github.com/Vansh042" target="_blank" rel="noopener noreferrer" class="text-sm font-medium theme-heading hover:text-violetAccent truncate block">github.com/Vansh042</a>
+                  </div>
+                </div>
+                <a href="https://github.com/Vansh042" target="_blank" rel="noopener noreferrer" class="theme-chip px-2.5 py-1.5 rounded-lg text-xs font-mono border shrink-0">
+                  Open ↗
+                </a>
+              </div>
+
+              <!-- Location Card -->
+              <div class="theme-card rounded-xl border p-4 flex items-center gap-3.5">
+                <div class="p-2.5 rounded-xl bg-cyanAccent/15 theme-cyan border border-cyanAccent/30 shrink-0">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-mono theme-muted">Base Location</div>
+                  <div class="text-sm font-medium theme-heading">Behlana, UT Chandigarh (160003) &amp; Mohali, Punjab, India</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Working Contact Form -->
+          <div class="lg:col-span-7">
+            <div class="theme-card rounded-2xl border p-6 sm:p-8">
+              <div class="flex items-center justify-between mb-6">
+                <div>
+                  <h3 class="font-display text-xl font-bold theme-heading">Send a Direct Message</h3>
+                  <p class="text-xs theme-muted mt-1">
+                    Formats and dispatches your inquiry directly to <span class="font-mono theme-cyan">vanshdeep042@gmail.com</span>.
+                  </p>
+                </div>
+                <span class="px-2.5 py-1 rounded-full text-[11px] font-mono bg-emerald-500/15 text-emerald-500 border border-emerald-500/30">
+                  Active Dispatch
+                </span>
+              </div>
+
+              <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="contact-name" class="block text-xs font-mono uppercase theme-body mb-1.5">Your Name *</label>
+                    <input id="contact-name" name="name" type="text" required placeholder="e.g. Priya Verma (Recruiter at Acme)" class="theme-input w-full px-3.5 py-2.5 rounded-xl border text-sm placeholder-slate-400 focus:outline-none focus:border-electric transition" />
+                  </div>
+                  <div>
+                    <label for="contact-sender-email" class="block text-xs font-mono uppercase theme-body mb-1.5">Your Email *</label>
+                    <input id="contact-sender-email" name="email" type="email" required placeholder="e.g. priya@company.com" class="theme-input w-full px-3.5 py-2.5 rounded-xl border text-sm placeholder-slate-400 focus:outline-none focus:border-electric transition" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="contact-role-track" class="block text-xs font-mono uppercase theme-body mb-1.5">Opportunity Type</label>
+                    <select id="contact-role-track" name="roleTrack" class="theme-input w-full px-3.5 py-2.5 rounded-xl border text-sm focus:outline-none focus:border-electric transition">
+                      <option value="Software Development Internship / Role">Software Development Internship / Role</option>
+                      <option value="Python Developer Opportunity">Python Developer Opportunity</option>
+                      <option value="Data Analytics / BI Opportunity">Data Analytics / BI Opportunity</option>
+                      <option value="AI / Machine Learning Opportunity">AI / Machine Learning Opportunity</option>
+                      <option value="Project Collaboration / Hackathon">Project Collaboration / Hackathon</option>
+                      <option value="General Inquiry">General Inquiry</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="contact-subject" class="block text-xs font-mono uppercase theme-body mb-1.5">Subject *</label>
+                    <input id="contact-subject" name="subject" type="text" required placeholder="e.g. Interview Invitation — Python Intern" class="theme-input w-full px-3.5 py-2.5 rounded-xl border text-sm placeholder-slate-400 focus:outline-none focus:border-electric transition" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="contact-message" class="block text-xs font-mono uppercase theme-body mb-1.5">Message *</label>
+                  <textarea id="contact-message" name="message" rows="4" required placeholder="Hi Vanshdeep, we reviewed your GitHub projects and would love to schedule an introductory chat..." class="theme-input w-full px-3.5 py-2.5 rounded-xl border text-sm placeholder-slate-400 focus:outline-none focus:border-electric transition"></textarea>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+                  <button type="submit" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm bg-gradient-to-r from-electric to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white shadow-lg shadow-electric/25 transition">
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                    <span>Send Message</span>
+                  </button>
+                  <button type="button" onclick="fillSampleRecruiterMessage()" class="text-xs font-mono theme-muted hover:text-electric transition">
+                    Auto-Fill Sample Recruiter Note
+                  </button>
+                </div>
+              </form>
+
+              <!-- Interactive Submission Confirmation -->
+              <div id="contact-submission-panel" class="hidden mt-6 pt-5 border-t theme-border space-y-3">
+                <div class="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/40 text-xs space-y-2">
+                  <div class="flex items-center justify-between">
+                    <span class="font-mono font-bold text-emerald-500 flex items-center gap-1.5">
+                      <i data-lucide="check-circle-2" class="w-4 h-4"></i> Message Prepared &amp; Ready!
+                    </span>
+                    <button type="button" onclick="copyLastMessageBody()" class="px-2.5 py-1 rounded bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-500 font-mono">
+                      Copy Full Email Text
+                    </button>
+                  </div>
+                  <p id="contact-confirm-summary" class="theme-body"></p>
+                  <div class="pt-1 flex flex-wrap gap-2">
+                    <a id="contact-mailto-trigger" href="mailto:vanshdeep042@gmail.com" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500 text-slate-950 font-semibold">
+                      Open in Default Email App ↗
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- J. FOOTER -->
+  <footer class="theme-footer relative z-10 border-t py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b theme-border">
+        <!-- Brand Info -->
+        <div class="md:col-span-5 space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-electric to-cyanAccent flex items-center justify-center font-display font-bold text-xs text-white">
+              VS
+            </div>
+            <span class="font-display font-bold text-lg theme-heading">Vanshdeep Sharma</span>
+          </div>
+          <p class="text-xs theme-muted max-w-sm leading-relaxed">
+            Computer Science Engineering Student (AI &amp; Data Science) | Aspiring Software Developer | Python Developer | Data Science &amp; AI Enthusiast.
+          </p>
+          <p class="text-xs font-mono theme-muted">
+            Behlana, UT Chandigarh (160003) / Mohali, Punjab, India
+          </p>
+        </div>
+
+        <!-- Quick Navigation Shortcuts -->
+        <div class="md:col-span-4 space-y-2">
+          <div class="text-xs font-mono uppercase tracking-wider theme-muted">Navigation Shortcuts</div>
+          <div class="grid grid-cols-2 gap-1.5 text-xs theme-body">
+            <a href="#home" class="hover:text-electric transition">Home</a>
+            <a href="#about" class="hover:text-electric transition">About Me</a>
+            <a href="#skills" class="hover:text-electric transition">Technical Skills</a>
+            <a href="#projects" class="hover:text-electric transition">Featured Projects</a>
+            <a href="#education" class="hover:text-electric transition">Education</a>
+            <a href="#certifications" class="hover:text-electric transition">Certifications</a>
+            <a href="#experience" class="hover:text-electric transition">SIH &amp; Activities</a>
+            <a href="#contact" class="hover:text-electric transition">Contact</a>
+          </div>
+        </div>
+
+        <!-- Profiles & Back to Top -->
+        <div class="md:col-span-3 flex flex-col justify-between items-start md:items-end gap-4">
+          <div class="flex items-center gap-2.5">
+            <a href="https://github.com/Vansh042" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="theme-chip p-2.5 rounded-xl border hover:border-electric transition">
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/vanshdeep-sharma-a08747215" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="theme-chip p-2.5 rounded-xl border text-blue-500 hover:border-electric transition">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+            <a href="mailto:vanshdeep042@gmail.com" aria-label="Email" class="theme-chip p-2.5 rounded-xl border theme-cyan hover:border-electric transition">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+            </a>
+          </div>
+          <a href="#home" class="theme-chip inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-mono border hover:border-electric transition">
+            <span>Back to Top</span>
+            <i data-lucide="arrow-up" class="w-3.5 h-3.5 theme-cyan"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs theme-muted gap-2">
+        <div>© <span id="current-year">2026</span> Vanshdeep Sharma. Built with clean architecture &amp; verified project data.</div>
+        <div class="font-mono text-[11px]">Open to Internships &amp; Entry-Level Engineering Roles</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL 1: PROJECT ARCHITECTURE & INTERACTIVE PIPELINE DEMO MODAL       -->
+  <!-- ===================================================================== -->
+  <div id="project-detail-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+    <div class="theme-card w-full max-w-3xl rounded-2xl border shadow-2xl overflow-hidden my-8">
+      <div class="theme-subcard flex items-center justify-between px-6 py-4 border-b">
+        <div class="flex items-center gap-2.5">
+          <span id="modal-project-status" class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-emerald-500/15 text-emerald-500 border border-emerald-500/30">Completed</span>
+          <span id="modal-project-category" class="text-xs font-mono theme-cyan">Python • AI/ML</span>
+        </div>
+        <button type="button" onclick="closeProjectModal()" aria-label="Close Project Modal" class="p-1.5 rounded-lg theme-muted hover:text-electric">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-6 sm:p-8 space-y-6 max-h-[80vh] overflow-y-auto">
+        <div>
+          <h3 id="modal-project-title" class="font-display text-2xl font-bold theme-heading">Project Title</h3>
+          <p id="modal-project-subtitle" class="text-sm font-mono theme-cyan mt-1"></p>
+        </div>
+
+        <div class="theme-subcard p-4 rounded-xl border space-y-1.5">
+          <div class="text-xs font-mono uppercase text-amber-500">Problem Statement</div>
+          <p id="modal-project-problem" class="text-sm theme-body leading-relaxed"></p>
+        </div>
+
+        <div class="space-y-2">
+          <div class="text-xs font-mono uppercase theme-cyan">Architecture &amp; Engineering Implementation</div>
+          <p id="modal-project-description" class="text-sm theme-body leading-relaxed"></p>
+        </div>
+
+        <!-- Interactive Pipeline Walkthrough / Demo Preview Box -->
+        <div class="theme-subcard p-4 rounded-xl border space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono uppercase text-electric flex items-center gap-1.5">
+              <i data-lucide="terminal" class="w-4 h-4"></i> Interactive Pipeline Walkthrough
+            </span>
+            <button type="button" onclick="runModalPipelineSimulation()" class="px-3 py-1 rounded-lg bg-electric text-white text-xs font-mono font-semibold hover:bg-blue-500 transition">
+              Run Pipeline Trace ▶
+            </button>
+          </div>
+          <pre id="modal-pipeline-output" class="text-xs font-mono text-emerald-400 bg-slate-950 p-3.5 rounded-lg overflow-x-auto whitespace-pre-wrap leading-relaxed border border-slate-800"></pre>
+        </div>
+
+        <div class="space-y-2">
+          <div class="text-xs font-mono uppercase text-electric">Key Technical Features &amp; Verification</div>
+          <ul id="modal-project-features" class="space-y-2 text-sm theme-body list-disc pl-5"></ul>
+        </div>
+
+        <div class="space-y-2">
+          <div class="text-xs font-mono uppercase text-violetAccent">Technologies Used</div>
+          <div id="modal-project-tech" class="flex flex-wrap gap-2"></div>
+        </div>
+
+        <div class="pt-4 border-t theme-border flex flex-wrap items-center justify-between gap-3">
+          <a id="modal-project-github" href="https://github.com/Vansh042" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm bg-electric hover:bg-blue-500 text-white transition">
+            <i data-lucide="github" class="w-4 h-4"></i>
+            <span>View GitHub Repository ↗</span>
+          </a>
+          <button type="button" onclick="closeProjectModal()" class="theme-chip px-4 py-2.5 rounded-xl text-xs font-mono border">
+            Close Window
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL 2: INTERACTIVE RESUME VIEWER, TRACK SELECTOR & DOWNLOAD STUDIO  -->
+  <!-- ===================================================================== -->
+  <div id="resume-modal" class="fixed inset-0 z-50 hidden bg-slate-950/85 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div class="theme-card w-full max-w-4xl rounded-2xl border shadow-2xl overflow-hidden my-6 flex flex-col max-h-[90vh]">
+      <!-- Top Controls (Hidden when printing) -->
+      <div class="no-print theme-subcard px-6 py-4 border-b flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="file-check-2" class="w-5 h-5 theme-cyan"></i>
+          <div>
+            <h3 class="font-display font-bold text-base theme-heading">Vanshdeep Sharma — Interactive Resume &amp; Download</h3>
+            <p class="text-xs theme-muted">Tailor by career track, download standalone file, or save as PDF</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2">
+          <select id="resume-track-selector" aria-label="Select Resume Career Track" onchange="updatePrintableResumeTrack(this.value)" class="theme-input px-3 py-1.5 rounded-lg border text-xs font-mono">
+            <option value="all">All-Rounder CSE (AI &amp; DS) Resume</option>
+            <option value="0">Track 1: AI / ML &amp; Data Science</option>
+            <option value="1">Track 2: Data Analyst &amp; BI</option>
+            <option value="2">Track 3: Software Engineer / Full-Stack</option>
+            <option value="3">Track 4: QA / Software Testing &amp; SDET</option>
+            <option value="4">Track 5: ADM, App Support &amp; Cloud Ops</option>
+            <option value="5">Track 6: Cybersecurity &amp; SOC Analyst L1</option>
+            <option value="6">Track 7: Business Analyst &amp; Product Ops</option>
+            <option value="7">Track 8: Implementation &amp; AI Automation</option>
+          </select>
+          <button type="button" onclick="downloadResumeFile('html')" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-electric hover:bg-blue-500 text-white text-xs font-semibold transition">
+            <i data-lucide="download" class="w-3.5 h-3.5"></i> Download (.HTML)
+          </button>
+          <button type="button" onclick="downloadResumeFile('txt')" class="theme-chip inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-mono transition">
+            .TXT
+          </button>
+          <button type="button" onclick="window.print()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-500 border border-emerald-500/30 text-xs font-mono transition">
+            <i data-lucide="printer" class="w-3.5 h-3.5"></i> Print / PDF
+          </button>
+          <button type="button" onclick="closeResumeModal()" aria-label="Close Resume Modal" class="p-1.5 rounded-lg theme-muted hover:text-electric">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Printable Resume Sheet -->
+      <div class="p-6 sm:p-8 overflow-y-auto bg-slate-900/40">
+        <div id="printable-resume-sheet" class="bg-white text-slate-900 rounded-xl p-6 sm:p-10 shadow-lg max-w-3xl mx-auto space-y-5 font-sans">
+          <div class="border-b-2 border-slate-900 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <h1 class="text-2xl font-extrabold tracking-tight text-slate-900">VANSHDEEP SHARMA</h1>
+              <p id="resume-sheet-subtitle" class="text-sm font-semibold text-blue-700">
+                Final-Year B.Tech (Computer Science Engineering — AI &amp; Data Science)
+              </p>
+            </div>
+            <div class="text-xs text-slate-700 space-y-0.5 sm:text-right font-mono">
+              <div>Behlana, UT Chandigarh, India (160003)</div>
+              <div>+91 7814438015 | vanshdeep042@gmail.com</div>
+              <div>github.com/Vansh042 | linkedin.com/in/vanshdeep-sharma-a08747215</div>
+            </div>
+          </div>
+
+          <!-- Objective -->
+          <div>
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Career Objective</h2>
+            <p id="resume-sheet-objective" class="text-xs text-slate-800 leading-relaxed">
+              Final-year B.Tech Computer Science Engineering (Artificial Intelligence &amp; Data Science) undergraduate at CGC Landran (2023–2027) seeking internship and entry-level opportunities in Software Development, Python Development, Data Analytics, and AI/ML. Proven track record of building modular, unit-tested Python and GenAI applications.
+            </p>
+          </div>
+
+          <!-- Technical Skills -->
+          <div>
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Technical Skills</h2>
+            <div id="resume-sheet-skills" class="text-xs text-slate-800 space-y-1 leading-relaxed">
+              <div><strong>Programming &amp; Web:</strong> Python, SQL (MySQL/SQLite), C, C++, JavaScript (ES6+), React.js, Node.js, HTML5, CSS3, REST APIs, Streamlit, Gradio</div>
+              <div><strong>AI, ML &amp; NLP:</strong> Scikit-Learn (Logistic Regression, Random Forest, Naive Bayes), NLTK, TF-IDF, Google Gemini API (google-genai), Pydantic, Prompt Engineering</div>
+              <div><strong>Data Analytics &amp; BI:</strong> Pandas, NumPy, Matplotlib, Seaborn, MS Excel (VLOOKUP/XLOOKUP, Pivot Tables), Power BI (DAX Basics, KPI Dashboards), EDA</div>
+              <div><strong>Cloud, QA &amp; Tools:</strong> AWS Cloud Operations (IAM, VPC, CloudWatch), Automated Unit/Integration/System/UAT Testing, Git, GitHub, Linux/Windows CLI</div>
+            </div>
+          </div>
+
+          <!-- Projects -->
+          <div>
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Key Technical Projects (github.com/Vansh042)</h2>
+            <div class="space-y-2.5 text-xs text-slate-800">
+              <div>
+                <div class="flex justify-between font-bold">
+                  <span>1. Phishing Email Detection System (Python, Scikit-Learn, NLTK, TF-IDF, Streamlit)</span>
+                  <span class="font-mono text-[11px] text-blue-700">github.com/Vansh042/Phishing-Email-Detection-System</span>
+                </div>
+                <p class="mt-0.5">Modular 4-file Python system (preprocess.py, train.py, predict.py, ui.py) using 5,000 unigram/bigram TF-IDF features across ~10,000 emails (97.3% accuracy, 0.99 ROC-AUC). Verified across 27 automated Unit, Integration, System, and UAT test cases.</p>
+              </div>
+              <div>
+                <div class="flex justify-between font-bold">
+                  <span>2. AI Property Video Generator (Python, Gemini 2.5 Flash API, Pydantic, Gradio, Pillow, MoviePy)</span>
+                  <span class="font-mono text-[11px] text-blue-700">github.com/Vansh042/real-estate-video-generator</span>
+                </div>
+                <p class="mt-0.5">Automated multimodal GenAI pipeline converting property metadata and photos into narrated MP4 promo videos using Google Gemini 2.5 Flash API and Pydantic structured JSON validation, with custom Pillow caption overlays.</p>
+              </div>
+              <div>
+                <div class="flex justify-between font-bold">
+                  <span>3. Circadian-Metabolic Health Platform (Python, Streamlit, Pandas, SQLite)</span>
+                  <span class="font-mono text-[11px] text-blue-700">github.com/Vansh042/Circadian-Metabolic-Health-Platform</span>
+                </div>
+                <p class="mt-0.5">Full-stack local web app and Pandas ETL pipeline harmonizing 15+ wearable sensor datasets and Indian nutrition tables (indianfoods.xlsx) with automated weekly PDF reports.</p>
+              </div>
+              <div>
+                <div class="flex justify-between font-bold">
+                  <span>4. Instagram NLP Image &amp; Metadata Classifier (Python, Scikit-Learn, Regex, TF-IDF)</span>
+                  <span class="font-mono text-[11px] text-blue-700">github.com/Vansh042/Instagram-NLP-Image-and-Metadata-Classifier</span>
+                </div>
+                <p class="mt-0.5">Text-based NLP classification pipeline separating genuine food posts from spam over deeply nested Instagram JSON metadata (pavbhaji.json) using Regex cleaning, 1–3 n-gram TF-IDF, and Logistic Regression.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div>
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Education</h2>
+            <div class="text-xs text-slate-800 space-y-1">
+              <div class="flex justify-between">
+                <span><strong>B.Tech in Artificial Intelligence &amp; Data Science</strong> — Chandigarh Group of Colleges (CGC), Landran, Mohali</span>
+                <span class="font-mono">2023 – 2027</span>
+              </div>
+              <div class="flex justify-between">
+                <span><strong>CBSE Class XII (2022–2023) &amp; Class X (2020–2021)</strong> — Dev Samaj Modern School, Sector 21C, Chandigarh</span>
+                <span class="font-mono">2020 – 2023</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications & Achievements -->
+          <div>
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Certifications &amp; Hackathon Achievements</h2>
+            <ul class="list-disc pl-4 text-xs text-slate-800 space-y-1">
+              <li><strong>Certifications:</strong> AWS Academy Graduate (Cloud Operations &amp; Generative AI Foundations), AI First Software Engineering Certificate, Infosys Prompt Engineering Certificate, Cisco Data Analytics Essentials, Python for Data Analysis (Pandas &amp; NumPy), IBM ML0101EN Certificate (Cognitive Class).</li>
+              <li><strong>Smart India Hackathon (SIH):</strong> Cleared two levels of SIH 2023, participated in SIH 2024, and coordinated participant activities and institutional execution for SIH 2025 at CGC Landran.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 hidden">
+    <div class="theme-card px-4 py-3 rounded-xl border border-electric/50 text-xs font-mono shadow-xl flex items-center gap-2.5">
+      <i data-lucide="check-circle" class="w-4 h-4 theme-cyan"></i>
+      <span id="toast-message" class="theme-heading">Action completed</span>
+    </div>
+  </div>
+
+  <!-- APPLICATION SCRIPT -->
+  <script>
+    const CAREER_TRACKS = [
+      {
+        track: "Track 1: AI / ML & Data Science",
+        skills: ["Python", "SQL", "C++", "Scikit-Learn (Logistic Regression, Random Forest, Naive Bayes)", "NLTK", "TF-IDF", "Google Gemini API (google-genai)", "Pydantic", "Streamlit", "Gradio", "Pandas", "NumPy", "AWS Cloud"],
+        repos: ["Phishing Email Detection System", "AI Property Video Generator", "Instagram NLP Image & Metadata Classifier"]
+      },
+      {
+        track: "Track 2: Data Analyst & BI",
+        skills: ["SQL (Joins, CTEs, Window Queries, MySQL/SQLite)", "MS Excel (VLOOKUP/XLOOKUP, Pivot Tables)", "Power BI (DAX Basics, KPI Dashboards)", "Python (Pandas, NumPy, Matplotlib, Seaborn)", "EDA", "Statistics"],
+        repos: ["Circadian-Metabolic Health Platform", "Phishing Email Detection System", "Instagram NLP Image & Metadata Classifier"]
+      },
+      {
+        track: "Track 3: Software Engineer / Full-Stack",
+        skills: ["Python", "C", "C++", "JavaScript (ES6+)", "React.js", "Node.js", "SQL", "HTML5", "CSS3", "DSA", "OOP", "REST APIs", "Pydantic", "Streamlit", "Gradio", "Automated Unit/System Testing", "Git", "GitHub", "AWS"],
+        repos: ["Phishing Email Detection System", "AI Property Video Generator", "Circadian-Metabolic Health Platform"]
+      },
+      {
+        track: "Track 4: QA / Software Testing & SDET",
+        skills: ["Unit, Integration, System & UAT Testing", "Test Case Design", "Boundary & Negative Testing", "Bug Reporting", "Python Test Scripting", "Pydantic JSON Schema Validation", "SQL Data Integrity Testing", "HTML/CSS/JS DOM Inspection"],
+        repos: ["Phishing Email Detection System (27 Test Cases)", "AI Property Video Generator", "Circadian-Metabolic Health Platform"]
+      },
+      {
+        track: "Track 5: ADM, App Support & Cloud/IT Infra",
+        skills: ["AWS Academy Cloud Operations", "Linux & Windows OS Administration", "CLI Troubleshooting", "Application Maintenance", "Deployment & Log Root-Cause Analysis", "Incident Triage & SLA Tracking", "SQL & Python Automation"],
+        repos: ["AI Property Video Generator", "Circadian-Metabolic Health Platform", "Phishing Email Detection System"]
+      },
+      {
+        track: "Track 6: Cybersecurity, SOC Analyst L1 & Cloud Security",
+        skills: ["Phishing & Malicious URL Detection", "Alert Triage & Log Analysis", "AWS IAM/VPC/Security Groups/CloudWatch", "Linux/Windows Hardening", "Regex Payload Sanitization", "Python Security Scripting", "SQLite Data Privacy"],
+        repos: ["Phishing Email Detection System", "Instagram NLP Image & Metadata Classifier", "Circadian-Metabolic Health Platform"]
+      },
+      {
+        track: "Track 7: Business Analyst (BA), Product Ops & APM",
+        skills: ["Requirement Gathering (BRDs, PRDs, User Stories)", "KPI & Funnel Metrics", "Cohort Analysis", "SQL", "MS Excel (XLOOKUP, Pivot Tables, MIS)", "Power BI Dashboards", "UAT Coordination", "AI Product Prototyping"],
+        repos: ["Circadian-Metabolic Health Platform", "AI Property Video Generator", "Phishing Email Detection System"]
+      },
+      {
+        track: "Track 8: Implementation, Solutions & AI/RPA Automation",
+        skills: ["REST API Integrations", "Pydantic JSON Schema Validation", "Client Data Onboarding & SQL ETL", "Prompt Engineering & LLM Orchestration (Gemini API)", "Voice AI Workflows", "RPA & CRM/ERP Technical Configuration"],
+        repos: ["AI Property Video Generator", "Circadian-Metabolic Health Platform", "Phishing Email Detection System"]
+      }
+    ];
+
+    const PROJECTS_LIST = [
+      {
+        id: "proj-health",
+        title: "Circadian-Metabolic Health Platform (Cardiac & Metabolic Readiness System)",
+        status: "Completed",
+        categories: ["Python", "Data Analytics", "Web Development"],
+        problem: "Wearable health sensor exports and regional nutrition references exist in fragmented formats, making unified circadian and cardiac-metabolic readiness monitoring difficult.",
+        description: "Full-stack local web application (Python, Streamlit, SQLite) and Pandas ETL pipeline harmonizing 15+ wearable sensor datasets and Indian nutrition tables (indianfoods.xlsx) with interactive health indicator visualizations and automated weekly PDF reports.",
+        tech: ["Python", "Streamlit", "Pandas", "SQLite", "Data Visualization", "Automated PDF Reporting"],
+        features: [
+          "Pandas ETL pipeline harmonizing 15+ heterogeneous wearable health and sensor datasets",
+          "Integrated Indian dietary nutrition database (indianfoods.xlsx) for metabolic correlation",
+          "Interactive Streamlit dashboard tracking cardiac & metabolic readiness indicators",
+          "Automated weekly PDF summary generation backed by local SQLite storage"
+        ],
+        pipelineTrace: "[1/4] Pandas ETL: Ingested 15+ wearable sensor CSV streams + indianfoods.xlsx\n[2/4] Schema Harmonization: Normalized timestamps & macro-nutrient records into SQLite\n[3/4] Readiness Engine: Computed Circadian & Cardiac-Metabolic Readiness Indicators\n[4/4] Output: Rendered interactive Streamlit charts + exported weekly PDF health report.",
+        github: "https://github.com/Vansh042/Circadian-Metabolic-Health-Platform"
+      },
+      {
+        id: "proj-phishing",
+        title: "Phishing Email Detection System",
+        status: "Completed",
+        categories: ["Python", "AI/ML", "Data Analytics"],
+        problem: "Sophisticated phishing emails frequently bypass static rule filters, requiring an accurate, modular NLP classification system with rigorous quality assurance.",
+        description: "Modular 4-file Python system (preprocess.py, train.py, predict.py, ui.py) using Scikit-Learn, NLTK, and 5,000 unigram/bigram TF-IDF features across ~10,000 emails, achieving 97.3% accuracy and 0.99 ROC-AUC.",
+        tech: ["Python", "Scikit-Learn", "NLTK", "TF-IDF", "Streamlit", "27 Automated QA Tests"],
+        features: [
+          "Decoupled 4-file architecture separating preprocessing, training, inference, and UI",
+          "Trained across ~10,000 emails with 5,000 unigram/bigram TF-IDF features (97.3% accuracy, 0.99 ROC-AUC)",
+          "Verified across 27 automated Unit, Integration, System, and UAT test cases",
+          "Defensive exception handling for malformed inputs, missing datasets, and corrupted model artifacts"
+        ],
+        pipelineTrace: "[1/4] preprocess.py: Tokenized email body via NLTK & stripped malformed HTML/URLs\n[2/4] train.py: Extracted 5,000 unigram/bigram TF-IDF features across ~10,000 emails\n[3/4] predict.py: Scikit-Learn classifier evaluation -> Accuracy: 97.3% | ROC-AUC: 0.99\n[4/4] QA Suite: 27/27 Unit, Integration, System & UAT test cases PASSED.",
+        github: "https://github.com/Vansh042/Phishing-Email-Detection-System"
+      },
+      {
+        id: "proj-video",
+        title: "AI Property Video Generator",
+        status: "Completed",
+        categories: ["Python", "AI/ML", "Web Development"],
+        problem: "Producing narrated promotional videos from raw real-estate listing metadata and photos is manual, slow, and prone to external binary rendering failures.",
+        description: "Automated multimodal GenAI pipeline (CLI + Gradio web UI) converting property metadata and photos into narrated MP4 promo videos using Google Gemini 2.5 Flash API and Pydantic structured JSON validation.",
+        tech: ["Python", "Google Gemini 2.5 Flash API", "Pydantic", "Gradio", "Pillow (PIL)", "MoviePy", "gTTS"],
+        features: [
+          "Multimodal script & scene generation via Google Gemini 2.5 Flash API (google-genai)",
+          "Strict Pydantic JSON schema validation guaranteeing structured prompt outputs",
+          "Eliminated external ImageMagick binary failures by re-engineering caption overlays in pure Python (Pillow/PIL)",
+          "Synchronized MoviePy video assembly and gTTS narration accessible via CLI and Gradio UI"
+        ],
+        pipelineTrace: "[1/4] Input: Loaded property photos + listing metadata via Gradio Web UI\n[2/4] GenAI Orchestration: Google Gemini 2.5 Flash API -> Validated via Pydantic Schema\n[3/4] Pure-Python Overlay: Rendered dynamic captions via Pillow (PIL) without ImageMagick\n[4/4] Synthesis: Synchronized gTTS narration + MoviePy frames -> Exported HD MP4.",
+        github: "https://github.com/Vansh042/real-estate-video-generator"
+      },
+      {
+        id: "proj-instagram",
+        title: "Instagram NLP Image & Metadata Classifier",
+        status: "Completed",
+        categories: ["Python", "AI/ML", "Data Analytics"],
+        problem: "Public social media hashtag feeds contain deeply nested JSON payloads heavily polluted with promotional spam alongside genuine user content.",
+        description: "Text-based NLP classification pipeline separating genuine food posts from spam over deeply nested Instagram JSON metadata (pavbhaji.json) using Regex cleaning, 1–3 n-gram TF-IDF, and Logistic Regression.",
+        tech: ["Python", "Scikit-Learn", "Logistic Regression", "TF-IDF (1–3 n-grams)", "Regex", "JSON ETL"],
+        features: [
+          "Automated parser traversing deeply nested Instagram JSON metadata (pavbhaji.json)",
+          "Regex payload sanitization stripping noisy symbols, URLs, and malformed tags",
+          "1–3 n-gram TF-IDF feature extraction paired with Logistic Regression classification",
+          "Actionable spam vs. genuine content triage metrics for analytics workflows"
+        ],
+        pipelineTrace: "[1/4] JSON Parser: Traversed nested Instagram Graph payloads (pavbhaji.json)\n[2/4] Regex Sanitizer: Cleaned hashtags, URLs, emojis & promotional boilerplate\n[3/4] Vectorizer: Computed 1-3 n-gram TF-IDF feature matrix\n[4/4] Classifier: Logistic Regression separated genuine food posts from spam.",
+        github: "https://github.com/Vansh042/Instagram-NLP-Image-and-Metadata-Classifier"
+      },
+      {
+        id: "proj-amazon",
+        title: "Amazon E-Commerce Website Clone",
+        status: "Completed",
+        categories: ["Web Development"],
+        problem: "Replicating complex multi-category e-commerce product layouts, responsive navigation bars, and interactive client-side UI flows using core web standards.",
+        description: "Frontend e-commerce website built with HTML5, CSS3, and JavaScript featuring responsive product discovery grids, promotional banners, interactive cart interactions, and clean component styling.",
+        tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "Responsive Design", "DOM Manipulation"],
+        features: [
+          "Responsive product catalog grid and category navigation header",
+          "Interactive UI elements for product filtering and cart state preview",
+          "Cross-device layout compatibility across desktop, tablet, and mobile viewports"
+        ],
+        pipelineTrace: "[1/3] Layout Engine: Semantic HTML5 & CSS3 Grid/Flexbox responsive storefront\n[2/3] Interactive DOM: JavaScript (ES6+) category filtering & dynamic cart updates\n[3/3] Viewport Audit: Verified responsive breakpoints across desktop, tablet & mobile.",
+        github: "https://github.com/Vansh042"
+      },
+      {
+        id: "proj-future-slot",
+        title: "Upcoming Project: Enterprise SQL & Power BI Cohort Analytics",
+        status: "Planned",
+        categories: ["Data Analytics", "Python"],
+        problem: "Dedicated slot reserved for upcoming Data Analytics, Python Development, and Machine Learning case studies.",
+        description: "Planned analytics benchmark combining SQL window queries, Python Pandas cohort retention modeling, and interactive Power BI executive KPI dashboards.",
+        tech: ["SQL", "Python", "Pandas", "Power BI", "MS Excel"],
+        features: [
+          "Clearly marked as a planned project (zero fabricated claims)",
+          "Structured to showcase SQL CTEs, window functions, and Power BI DAX measures"
+        ],
+        pipelineTrace: "[Planned Architecture] SQL CTE/Window Extraction -> Pandas Cohort Matrix -> Power BI Executive Dashboard.",
+        github: "https://github.com/Vansh042"
+      }
+    ];
+
+    const CERTIFICATIONS_LIST = [
+      {
+        title: "AWS Academy Graduate — Cloud Operations & Generative AI Foundations",
+        issuer: "Amazon Web Services (AWS Academy)",
+        date: "Verified Graduate",
+        skills: "AWS Cloud Operations, IAM, VPC, CloudWatch, Generative AI Foundations",
+        link: "https://www.linkedin.com/in/vanshdeep-sharma-a08747215"
+      },
+      {
+        title: "AI First Software Engineering Certificate",
+        issuer: "Technical Certification Program",
+        date: "Completed",
+        skills: "AI-Assisted Software Engineering, Modular Design, Automated Verification",
+        link: "https://www.linkedin.com/in/vanshdeep-sharma-a08747215"
+      },
+      {
+        title: "Infosys Prompt Engineering Certificate",
+        issuer: "Infosys Springboard",
+        date: "Completed",
+        skills: "LLM Prompt Design, Structured Output Orchestration, GenAI Workflows",
+        link: "https://www.linkedin.com/in/vanshdeep-sharma-a08747215"
+      },
+      {
+        title: "Cisco Data Analytics Essentials",
+        issuer: "Cisco Networking Academy",
+        date: "Completed",
+        skills: "Data Transformation, Exploratory Data Analysis, SQL & BI Fundamentals",
+        link: "https://www.linkedin.com/in/vanshdeep-sharma-a08747215"
+      },
+      {
+        title: "Python for Data Analysis (Pandas & NumPy)",
+        issuer: "Data Science Certification",
+        date: "Completed",
+        skills: "Pandas DataFrames, NumPy Vectorization, Data Cleaning & Aggregation",
+        link: "https://github.com/Vansh042"
+      },
+      {
+        title: "IBM ML0101EN: Machine Learning with Python",
+        issuer: "IBM / Cognitive Class",
+        date: "Completed",
+        skills: "Classification, Regression, Clustering, Scikit-Learn Evaluation Metrics",
+        link: "https://www.linkedin.com/in/vanshdeep-sharma-a08747215"
+      }
+    ];
+
+    let currentFilter = "All";
+    let activeModalProject = null;
+    let lastFormattedEmail = "";
+
+    // Typing Effect
+    const ROLES = [
+      "Python Developer",
+      "Software Developer",
+      "Data Science Enthusiast",
+      "AI/ML Learner"
+    ];
+    let roleIdx = 0;
+    let charIdx = 0;
+    let isDeleting = false;
+    let typingTimer = null;
+
+    function runTypingEffect() {
+      const target = document.getElementById("typed-role-text");
+      if (!target) return;
+      const currentWord = ROLES[roleIdx];
+      if (isDeleting) {
+        charIdx--;
+      } else {
+        charIdx++;
+      }
+      target.textContent = currentWord.substring(0, charIdx);
+
+      let delay = isDeleting ? 45 : 85;
+      if (!isDeleting && charIdx === currentWord.length) {
+        delay = 1800;
+        isDeleting = true;
+      } else if (isDeleting && charIdx === 0) {
+        isDeleting = false;
+        roleIdx = (roleIdx + 1) % ROLES.length;
+        delay = 350;
+      }
+      clearTimeout(typingTimer);
+      typingTimer = setTimeout(runTypingEffect, delay);
+    }
+
+    // Render Projects
+    function renderProjects() {
+      const grid = document.getElementById("projects-grid");
+      if (!grid) return;
+
+      const filtered = currentFilter === "All"
+        ? PROJECTS_LIST
+        : PROJECTS_LIST.filter(p => p.categories.includes(currentFilter));
+
+      grid.innerHTML = filtered.map((proj) => {
+        const isCompleted = proj.status === "Completed";
+        const statusClass = isCompleted
+          ? "bg-emerald-500/15 text-emerald-500 border-emerald-500/30"
+          : "bg-amber-500/15 text-amber-500 border-amber-500/30";
+
+        const techBadges = proj.tech.slice(0, 5).map(t =>
+          `<span class="theme-chip px-2.5 py-1 rounded-md border text-[11px] font-mono">${t}</span>`
+        ).join("");
+
+        return `
+          <article class="theme-card rounded-2xl border p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono border ${statusClass}">
+                  ${proj.status}
+                </span>
+                <span class="text-[11px] font-mono theme-cyan truncate">
+                  ${proj.categories.join(" • ")}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-lg theme-heading leading-snug">
+                ${proj.title}
+              </h3>
+
+              <div class="theme-subcard mt-3 p-3 rounded-xl border">
+                <div class="text-[10px] font-mono uppercase tracking-wider theme-muted mb-0.5">Problem Statement</div>
+                <p class="text-xs theme-body line-clamp-2">${proj.problem}</p>
+              </div>
+
+              <p class="mt-3 text-xs theme-body leading-relaxed">
+                ${proj.description}
+              </p>
+
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                ${techBadges}
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t theme-border flex items-center justify-between gap-2">
+              <a href="${proj.github}" target="_blank" rel="noopener noreferrer" class="theme-chip inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-mono border hover:border-electric transition">
+                <i data-lucide="github" class="w-3.5 h-3.5 text-electric"></i>
+                <span>GitHub</span>
+              </a>
+              <button type="button" onclick="openProjectModal('${proj.id}')" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-electric/15 hover:bg-electric/25 text-electric border border-electric/30 transition">
+                <span>Interactive Demo &amp; Specs</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    }
+
+    function filterProjects(category) {
+      currentFilter = category;
+      const buttons = document.querySelectorAll(".project-filter-btn");
+      buttons.forEach(btn => {
+        const match = btn.getAttribute("data-filter") === category;
+        if (match) {
+          btn.className = "project-filter-btn px-3.5 py-2 rounded-xl text-xs font-mono font-semibold bg-electric text-white shadow-sm transition";
+        } else {
+          btn.className = "project-filter-btn theme-chip px-3.5 py-2 rounded-xl text-xs font-mono font-semibold border hover:border-electric transition";
+        }
+      });
+      renderProjects();
+    }
+
+    function openProjectModal(projectId) {
+      const proj = PROJECTS_LIST.find(p => p.id === projectId);
+      if (!proj) return;
+      activeModalProject = proj;
+      document.getElementById("modal-project-status").textContent = proj.status;
+      document.getElementById("modal-project-category").textContent = proj.categories.join(" • ");
+      document.getElementById("modal-project-title").textContent = proj.title;
+      document.getElementById("modal-project-subtitle").textContent = `Repository: ${proj.github}`;
+      document.getElementById("modal-project-problem").textContent = proj.problem;
+      document.getElementById("modal-project-description").textContent = proj.description;
+      document.getElementById("modal-pipeline-output").textContent = proj.pipelineTrace || "Click 'Run Pipeline Trace' to inspect execution stages.";
+
+      const featContainer = document.getElementById("modal-project-features");
+      featContainer.innerHTML = (proj.features || []).map(f => `<li>${f}</li>`).join("");
+
+      const techContainer = document.getElementById("modal-project-tech");
+      techContainer.innerHTML = (proj.tech || []).map(t =>
+        `<span class="theme-chip px-3 py-1 rounded-lg border text-xs font-mono">${t}</span>`
+      ).join("");
+
+      const ghLink = document.getElementById("modal-project-github");
+      ghLink.href = proj.github;
+
+      document.getElementById("project-detail-modal").classList.remove("hidden");
+    }
+
+    function runModalPipelineSimulation() {
+      if (!activeModalProject) return;
+      const out = document.getElementById("modal-pipeline-output");
+      if (!out) return;
+      const lines = (activeModalProject.pipelineTrace || "").split("\n");
+      out.textContent = "Initializing pipeline execution trace...\n";
+      lines.forEach((line, idx) => {
+        setTimeout(() => {
+          out.textContent += line + "\n";
+        }, (idx + 1) * 220);
+      });
+      showToast("Pipeline execution trace completed!");
+    }
+
+    function closeProjectModal() {
+      document.getElementById("project-detail-modal").classList.add("hidden");
+    }
+
+    function renderCareerTracks() {
+      const container = document.getElementById("tracks-cards-container");
+      if (!container) return;
+      container.innerHTML = CAREER_TRACKS.map((item, idx) => `
+        <div class="theme-card rounded-xl border p-5 space-y-3">
+          <div class="flex items-center justify-between gap-2">
+            <h3 class="font-display font-bold text-sm theme-heading">${item.track}</h3>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-electric/15 text-electric border border-electric/30">Track ${idx + 1}</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            ${item.skills.map(s => `<span class="theme-chip px-2 py-1 rounded border text-[11px] font-mono">${s}</span>`).join("")}
+          </div>
+          <div class="pt-2 border-t theme-border text-[11px] font-mono theme-cyan">
+            Key Repos: ${item.repos.join(" • ")}
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function switchSkillView(mode) {
+      const coreGrid = document.getElementById("skills-core-grid");
+      const tracksGrid = document.getElementById("skills-tracks-grid");
+      const btnCore = document.getElementById("tab-skills-core");
+      const btnTracks = document.getElementById("tab-skills-tracks");
+      if (mode === "tracks") {
+        coreGrid.classList.add("hidden");
+        tracksGrid.classList.remove("hidden");
+        btnTracks.className = "px-3.5 py-2 rounded-lg text-xs font-mono font-semibold bg-electric text-white transition";
+        btnCore.className = "px-3.5 py-2 rounded-lg text-xs font-mono font-semibold theme-muted hover:text-electric transition";
+      } else {
+        tracksGrid.classList.add("hidden");
+        coreGrid.classList.remove("hidden");
+        btnCore.className = "px-3.5 py-2 rounded-lg text-xs font-mono font-semibold bg-electric text-white transition";
+        btnTracks.className = "px-3.5 py-2 rounded-lg text-xs font-mono font-semibold theme-muted hover:text-electric transition";
+      }
+    }
+
+    function renderCertifications() {
+      const grid = document.getElementById("certifications-grid");
+      if (!grid) return;
+      grid.innerHTML = CERTIFICATIONS_LIST.map((cert) => `
+        <div class="theme-card rounded-2xl border p-5 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-emerald-500/15 text-emerald-500 border border-emerald-500/30">
+                ${cert.date}
+              </span>
+              <i data-lucide="badge-check" class="w-4 h-4 theme-cyan"></i>
+            </div>
+            <h3 class="font-display font-bold text-base theme-heading leading-snug">${cert.title}</h3>
+            <p class="text-xs font-mono theme-cyan mt-1">${cert.issuer}</p>
+            <p class="text-xs theme-muted mt-2.5 leading-relaxed">${cert.skills}</p>
+          </div>
+          <div class="mt-4 pt-3 border-t theme-border flex items-center justify-between text-xs">
+            <span class="font-mono text-[11px] theme-muted">Verified Credential</span>
+            <a href="${cert.link}" target="_blank" rel="noopener noreferrer" class="font-mono text-electric hover:underline">
+              View Profile ↗
+            </a>
+          </div>
+        </div>
+      `).join("");
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    }
+
+    // Resume Modal & Download
+    function openResumeModal() {
+      document.getElementById("resume-modal").classList.remove("hidden");
+    }
+    function closeResumeModal() {
+      document.getElementById("resume-modal").classList.add("hidden");
+    }
+
+    function updatePrintableResumeTrack(val) {
+      const subtitleEl = document.getElementById("resume-sheet-subtitle");
+      const skillsEl = document.getElementById("resume-sheet-skills");
+      if (val === "all") {
+        subtitleEl.textContent = "Final-Year B.Tech (Computer Science Engineering — AI & Data Science)";
+        skillsEl.innerHTML = `
+          <div><strong>Programming &amp; Web:</strong> Python, SQL (MySQL/SQLite), C, C++, JavaScript (ES6+), React.js, Node.js, HTML5, CSS3, REST APIs, Streamlit, Gradio</div>
+          <div><strong>AI, ML &amp; NLP:</strong> Scikit-Learn (Logistic Regression, Random Forest, Naive Bayes), NLTK, TF-IDF, Google Gemini API (google-genai), Pydantic, Prompt Engineering</div>
+          <div><strong>Data Analytics &amp; BI:</strong> Pandas, NumPy, Matplotlib, Seaborn, MS Excel (VLOOKUP/XLOOKUP, Pivot Tables), Power BI (DAX Basics, KPI Dashboards), EDA</div>
+          <div><strong>Cloud, QA &amp; Tools:</strong> AWS Cloud Operations (IAM, VPC, CloudWatch), Automated Unit/Integration/System/UAT Testing, Git, GitHub, Linux/Windows CLI</div>
+        `;
+      } else {
+        const trackObj = CAREER_TRACKS[parseInt(val, 10)];
+        if (!trackObj) return;
+        subtitleEl.textContent = `B.Tech (AI & Data Science) — Tailored for ${trackObj.track}`;
+        skillsEl.innerHTML = `
+          <div><strong>Target Track Focus:</strong> ${trackObj.track}</div>
+          <div><strong>Curated Languages, Frameworks &amp; Tools:</strong> ${trackObj.skills.join(", ")}</div>
+          <div><strong>Highlighted Track Repositories:</strong> ${trackObj.repos.join(" | ")}</div>
+        `;
+      }
+      showToast("Resume tailored to selected track!");
+    }
+
+    function downloadResumeFile(format) {
+      const sheet = document.getElementById("printable-resume-sheet");
+      if (!sheet) return;
+      if (format === "txt") {
+        const plainText = [
+          "VANSHDEEP SHARMA",
+          "Final-Year B.Tech (AI & Data Science) — Chandigarh Group of Colleges (CGC), Landran, Mohali (2023-2027)",
+          "Location: Behlana, UT Chandigarh, India (160003) | Phone: +91 7814438015 | Email: vanshdeep042@gmail.com",
+          "LinkedIn: https://www.linkedin.com/in/vanshdeep-sharma-a08747215 | GitHub: https://github.com/Vansh042",
+          "",
+          "CAREER OBJECTIVE",
+          "Seeking internship and entry-level opportunities in Software Development, Python Development, Data Analytics, Artificial Intelligence, and Machine Learning.",
+          "",
+          "TECHNICAL SKILLS",
+          "- Programming & Web: Python, SQL, C, C++, JavaScript (ES6+), React.js, Node.js, HTML5, CSS3, REST APIs, Streamlit, Gradio",
+          "- Data Analytics & BI: Pandas, NumPy, Matplotlib, Seaborn, MS Excel (XLOOKUP, Pivot Tables), Power BI (DAX, KPI Dashboards), SQL (CTEs, Window Queries)",
+          "- AI, ML & GenAI: Scikit-Learn, NLTK, TF-IDF, Google Gemini API (google-genai), Pydantic, Prompt Engineering",
+          "- Cloud, QA & Tools: AWS Academy Cloud Operations, Unit/Integration/System/UAT Testing (27 Test Cases), Git, GitHub, Linux/Windows CLI",
+          "",
+          "FEATURED PROJECTS",
+          "1. Phishing Email Detection System | https://github.com/Vansh042/Phishing-Email-Detection-System",
+          "   Modular 4-file Python system using Scikit-Learn, NLTK, and 5,000 unigram/bigram TF-IDF features (~10,000 emails, 97.3% accuracy, 0.99 ROC-AUC). Verified across 27 automated test cases.",
+          "2. AI Property Video Generator | https://github.com/Vansh042/real-estate-video-generator",
+          "   Automated multimodal GenAI pipeline (CLI + Gradio UI) converting property metadata and photos into narrated MP4 videos using Google Gemini 2.5 Flash API, Pydantic, Pillow, and MoviePy.",
+          "3. Circadian-Metabolic Health Platform | https://github.com/Vansh042/Circadian-Metabolic-Health-Platform",
+          "   Full-stack local web app (Python, Streamlit, SQLite) and Pandas ETL pipeline harmonizing 15+ wearable sensor datasets and Indian nutrition tables with weekly PDF reports.",
+          "4. Instagram NLP Image & Metadata Classifier | https://github.com/Vansh042/Instagram-NLP-Image-and-Metadata-Classifier",
+          "   NLP classification pipeline separating genuine food posts from spam over deeply nested Instagram JSON metadata using Regex, 1-3 n-gram TF-IDF, and Logistic Regression.",
+          "",
+          "EDUCATION",
+          "- B.Tech in Artificial Intelligence & Data Science: CGC Landran, Mohali, Punjab (2023 - 2027)",
+          "- CBSE Class XII (2022-2023) & Class X (2020-2021): Dev Samaj Modern School, Sector 21C, Chandigarh",
+          "",
+          "CERTIFICATIONS & ACHIEVEMENTS",
+          "- Certifications: AWS Academy Graduate (Cloud Operations & GenAI Foundations), AI First Software Engineering Certificate, Infosys Prompt Engineering Certificate, Cisco Data Analytics Essentials, Python for Data Analysis, IBM ML0101EN.",
+          "- Achievements: Cleared two levels of Smart India Hackathon (SIH) 2023, participated in SIH 2024, and coordinated participant activities and institutional execution for SIH 2025 at CGC Landran."
+        ].join("\n");
+
+        const blob = new Blob([plainText], { type: "text/plain;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "Vanshdeep_Sharma_Resume.txt";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast("Downloaded Vanshdeep_Sharma_Resume.txt");
+      } else {
+        const htmlDoc = `<!DOCTYPE html><html><head><meta charset="utf-8"><title>Vanshdeep Sharma Resume</title><style>body{font-family:Arial,sans-serif;max-width:800px;margin:32px auto;padding:0 20px;color:#0f172a;line-height:1.5}h1{margin:0;font-size:24px}h2{font-size:13px;text-transform:uppercase;border-bottom:1px solid #cbd5e1;padding-bottom:4px;margin-top:18px}</style></head><body>${sheet.innerHTML}</body></html>`;
+        const blob = new Blob([htmlDoc], { type: "text/html;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "Vanshdeep_Sharma_Resume.html";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast("Downloaded printable Vanshdeep_Sharma_Resume.html");
+      }
+    }
+
+    // Contact Form Submission (Real FormSubmit AJAX Dispatch to vanshdeep042@gmail.com + Mailto Fallback)
+    async function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById("contact-name").value.trim();
+      const email = document.getElementById("contact-sender-email").value.trim();
+      const roleTrack = document.getElementById("contact-role-track").value;
+      const subject = document.getElementById("contact-subject").value.trim();
+      const message = document.getElementById("contact-message").value.trim();
+
+      const fullSubject = `[Portfolio Inquiry - ${roleTrack}] ${subject}`;
+      const fullBody = `Hello Vanshdeep,\n\n${message}\n\n---\nSender Name: ${name}\nSender Email: ${email}\nOpportunity Track: ${roleTrack}`;
+      lastFormattedEmail = `To: vanshdeep042@gmail.com\nSubject: ${fullSubject}\n\n${fullBody}`;
+
+      const mailtoUrl = `mailto:vanshdeep042@gmail.com?subject=${encodeURIComponent(fullSubject)}&body=${encodeURIComponent(fullBody)}`;
+      const trigger = document.getElementById("contact-mailto-trigger");
+      if (trigger) {
+        trigger.href = mailtoUrl;
+      }
+
+      const summary = document.getElementById("contact-confirm-summary");
+      document.getElementById("contact-submission-panel").classList.remove("hidden");
+      if (summary) {
+        summary.textContent = `Sending message directly to vanshdeep042@gmail.com...`;
+      }
+
+      try {
+        const res = await fetch("https://formsubmit.co/ajax/vanshdeep042@gmail.com", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            _replyto: email,
+            opportunity_track: roleTrack,
+            _subject: fullSubject,
+            message: message
+          })
+        });
+        const data = await res.json();
+        if (res.ok && (data.success === "true" || data.success === true)) {
+          if (summary) {
+            summary.textContent = `Delivered directly to vanshdeep042@gmail.com from ${name} (${email})! (Note: On your very first test submission, check your Gmail inbox/spam for a one-time FormSubmit activation link).`;
+          }
+          showToast("Email sent directly to vanshdeep042@gmail.com!");
+          e.target.reset();
+        } else {
+          if (summary) {
+            summary.textContent = `Note: First-time domain activation required or blocked in sandbox preview. Click "Open in Default Email App" below to send immediately via your mail client.`;
+          }
+          showToast("Use 'Open in Default Email App' or activate FormSubmit in Gmail");
+        }
+      } catch (err) {
+        if (summary) {
+          summary.textContent = `Prepared message from ${name} (${email}). Click "Open in Default Email App" below to send directly via your email client.`;
+        }
+        showToast("Message ready — click 'Open in Default Email App' to send!");
+      }
+    }
+
+    function fillSampleRecruiterMessage() {
+      document.getElementById("contact-name").value = "Ananya Mehta (Technical Recruiter)";
+      document.getElementById("contact-sender-email").value = "ananya.mehta@techhiring.in";
+      document.getElementById("contact-role-track").value = "Python Developer Opportunity";
+      document.getElementById("contact-subject").value = "Interview Invitation — Python & AI Engineering Intern";
+      document.getElementById("contact-message").value = "Hi Vanshdeep, we were impressed by your Phishing Email Detection System (with 27 automated test cases) and your Gemini 2.5 Flash Property Video Generator. Are you available this week for a 20-minute technical screening call?";
+      showToast("Sample recruiter inquiry populated!");
+    }
+
+    function copyLastMessageBody() {
+      if (!lastFormattedEmail) return;
+      copyText(lastFormattedEmail, "Full email message copied to clipboard!");
+    }
+
+    function copyText(text, toastMsg) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(toastMsg);
+        }).catch(() => {
+          fallbackCopy(text, toastMsg);
+        });
+      } else {
+        fallbackCopy(text, toastMsg);
+      }
+    }
+
+    function fallbackCopy(text, toastMsg) {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand("copy");
+        showToast(toastMsg);
+      } catch (e) {}
+      document.body.removeChild(ta);
+    }
+
+    // Rock-Solid Theme Toggle with Persistence
+    function applyTheme(mode) {
+      const htmlEl = document.documentElement;
+      const sunIcon = document.getElementById("theme-icon-sun");
+      const moonIcon = document.getElementById("theme-icon-moon");
+      const label = document.getElementById("theme-toggle-label");
+
+      if (mode === "light") {
+        htmlEl.classList.remove("dark");
+        htmlEl.classList.add("light");
+        if (sunIcon) sunIcon.classList.add("hidden");
+        if (moonIcon) moonIcon.classList.remove("hidden");
+        if (label) label.textContent = "Dark Mode";
+      } else {
+        htmlEl.classList.remove("light");
+        htmlEl.classList.add("dark");
+        if (moonIcon) moonIcon.classList.add("hidden");
+        if (sunIcon) sunIcon.classList.remove("hidden");
+        if (label) label.textContent = "Light Mode";
+      }
+      try {
+        localStorage.setItem("vs_portfolio_theme", mode);
+      } catch (e) {}
+    }
+
+    function toggleTheme() {
+      const isLight = document.documentElement.classList.contains("light");
+      const nextMode = isLight ? "dark" : "light";
+      applyTheme(nextMode);
+      showToast(nextMode === "light" ? "Switched to Light Theme" : "Switched to Dark Theme");
+    }
+
+    // Mobile Menu
+    function toggleMobileMenu() {
+      const drawer = document.getElementById("mobile-menu-drawer");
+      if (drawer) {
+        drawer.classList.toggle("hidden");
+      }
+    }
+    function closeMobileMenu() {
+      const drawer = document.getElementById("mobile-menu-drawer");
+      if (drawer) {
+        drawer.classList.add("hidden");
+      }
+    }
+
+    // Toast helper
+    let toastTimeout = null;
+    function showToast(msg) {
+      const container = document.getElementById("toast-container");
+      const text = document.getElementById("toast-message");
+      if (!container || !text) return;
+      text.textContent = msg;
+      container.classList.remove("hidden");
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        container.classList.add("hidden");
+      }, 3000);
+    }
+
+    // Initialize on load
+    window.addEventListener("DOMContentLoaded", () => {
+      try {
+        const savedTheme = localStorage.getItem("vs_portfolio_theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          applyTheme(savedTheme);
+        }
+      } catch (e) {}
+
+      renderProjects();
+      renderCareerTracks();
+      renderCertifications();
+      runTypingEffect();
+
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>
